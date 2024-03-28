@@ -1,0 +1,226 @@
+/* подключение сброса стилей */
+@import "./reset.css";      
+
+
+/* google-fonts */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+
+
+body {
+    font-family: "Poppins", sans-serif;
+    font-size: 14px;
+    font-weight: 400;
+    color: #070707;
+    line-height: 1;
+}
+
+a {
+    color: inherit;
+}
+
+.container {
+    max-width: 1230px;
+    padding: 0 30px;
+    margin: 0 auto;
+}
+
+.section {
+    padding: 90px 0;
+}
+
+.title-1 {
+    font-weight: 600;
+    font-size: 34px;
+}
+
+.btn {
+    display: inline-block;
+    padding: 7px 22px;
+    background: #070707;
+    border-radius: 30px;
+
+    font-size: 18px;
+    color: #fff;
+    line-height: calc(22 / 18 * 100%);
+
+    transition: background-color .3s ease-in, top .3s ease-in;
+}
+.btn:hover, 
+.btn:focus {
+    background-color: #323232;
+}
+.btn:active {
+    position: relative;
+    top: 1px;
+    background-color: #000;
+}
+
+/* -------- header -------------------------------------------- */
+.header {
+    padding: 46px 0 0;
+    background: #f1f1f1;
+    color: #000;
+}
+.header-nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+
+    margin-bottom: 76px;
+}
+
+.logo {
+    padding: 0 12px 3px 0;
+    font-weight: 700;
+    font-size: 32px;
+    position: relative;
+}
+.logo::after {
+    content: '';
+    display: block;
+    width: 8px;
+    height: 8px;
+    background: #fda300;
+    border-radius: 50%;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+}
+
+/* -------- nav -------------------------------------------- */
+.nav {
+}
+.nav-list {
+    display: flex;
+    column-gap: 50px;
+    font-weight: 500;
+}
+.nav-item {
+}
+.nav-link {
+    position: relative;
+}
+.nav-link::after {
+    content: '';
+    display: block;
+    width: 100%;
+    height: 2px;
+    background-color: #000;
+    position: absolute;
+    left: 0;
+    bottom: -5px;
+
+    opacity: 0;
+    transition: all .2s ease-in;
+}
+.nav-link:hover::after {
+    bottom: 0;
+    opacity: 1;
+}
+.nav-link.active {
+    color: #606060;
+}
+.nav-btn {
+    display: none;
+}
+
+
+/* -------- header content -------------------------------------------- */
+.header-row {
+    display: flex;
+    justify-content: space-between;
+    column-gap: 30px;
+}
+.header-content {
+    max-width: 500px;
+    margin-top: 124px;
+}
+.header-heading {
+    margin-bottom: 20px;
+    font-weight: 600;
+    font-size: calc(22px + (44 - 22) * ((100vw - 300px) / (1600 - 300)));
+    line-height: calc(66 / 44 * 100%);
+}
+.header-text {
+    font-size: calc(12px + (14 - 12) * ((100vw - 300px) / (1600 - 300)));
+    line-height: 2;
+}
+.header-img {
+}
+
+
+/* -------- services section -------------------------------------------- */
+.services-row {
+    display: flex;
+    column-gap: 30px;
+    row-gap: 60px;
+    flex-wrap: wrap;
+}
+.service-card {
+    flex: 1 1 0;
+    min-width: 315px;
+}
+.service-card__img {
+    margin-bottom: 30px;
+}
+.service-card__title {
+    font-weight: 600;
+    font-size: 24px;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+}
+.service-card__text {
+    line-height: 2;
+}
+
+/* -------- portfolio section -------------------------------------------- */
+.portfolio {
+    background: #f1f1f1;
+}
+.portfolio-title {
+    text-align: center;
+    margin-bottom: 70px;
+}
+.project {
+    text-align: center;
+}
+.project-img {
+    margin-bottom: 40px;
+}
+.project-title {
+    font-size: 18px;
+    text-decoration: underline;
+}
+.project:not(:last-child) {
+    margin-bottom: 90px;
+}
+
+
+/* -------- footer -------------------------------------------- */
+
+.contacts {
+    text-align: center;
+}
+.contacts-title {
+    margin-bottom: 40px;
+}
+.contacts-content {
+    font-size: 18px;
+    margin-bottom: 40px;
+}
+.contacts-content p + p {
+    margin-top: 1em;
+}
+.contacts-btn {
+    margin-bottom: 80px;
+}
+.contacts-social {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    column-gap: 60px;
+    margin-bottom: 40px;
+}
+.contacts-footer {
+    color: #828282;
+}
